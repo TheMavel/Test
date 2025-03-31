@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>B2B Contact Scraper</title>
+  <link rel="stylesheet" href="css/popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>B2B Contact Scraper</h1>
+    
+    <div class="top-section">
+      <div class="stats-and-actions">
+        <div class="stats">
+          <span class="contact-count">Contacts found: <strong id="contact-count">0</strong></span>
+        </div>
+        <div class="actions">
+          <button id="export-csv" class="button">Export to CSV</button>
+          <button id="clear-data" class="button secondary">Clear Data</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="toggle-container">
+      <label class="switch">
+        <input type="checkbox" id="scraping-toggle">
+        <span class="slider round"></span>
+      </label>
+      <span class="toggle-label">Scraping Active</span>
+    </div>
+
+    <div class="match-mode-container">
+      <button id="match-mode-toggle" class="button match-mode">ANY</button>
+      <span class="match-mode-label">Match Mode: Match ANY selected field</span>
+    </div>
+
+    <div class="field-toggles">
+      <h3>Display Fields</h3>
+      <div class="field-toggle">
+        <label>
+          <input type="checkbox" data-field="name" checked>
+          Name
+        </label>
+      </div>
+      <div class="field-toggle">
+        <label>
+          <input type="checkbox" data-field="company" checked>
+          Company
+        </label>
+      </div>
+      <div class="field-toggle">
+        <label>
+          <input type="checkbox" data-field="email" checked>
+          Email
+        </label>
+      </div>
+      <div class="field-toggle">
+        <label>
+          <input type="checkbox" data-field="address" checked>
+          Address
+        </label>
+      </div>
+      <div class="field-toggle">
+        <label>
+          <input type="checkbox" data-field="phone" checked>
+          Phone
+        </label>
+      </div>
+      <div class="field-toggle">
+        <label>
+          <input type="checkbox" data-field="position" checked>
+          Position
+        </label>
+      </div>
+      <div class="field-toggle">
+        <label>
+          <input type="checkbox" data-field="website" checked>
+          Website
+        </label>
+      </div>
+    </div>
+
+    <div class="contacts-display" id="contacts-display">
+      <!-- Contacts will be displayed here -->
+    </div>
+
+    <div class="status-message" id="status-message"></div>
+  </div>
+  <script src="js/popup.js"></script>
+</body>
+</html> 
